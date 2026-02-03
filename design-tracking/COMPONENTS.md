@@ -39,9 +39,38 @@ Tracking komponentów do zaprojektowania/zaktualizowania w Figma Make.
 
 | Komponent | Warianty | Priorytet | Status | Figma Link | Notatki |
 |-----------|----------|-----------|--------|------------|---------|
-| TabBar | | P0 | [ ] | | |
+| TabBar | | P0 | [ ] | | Phosphor Icons - patrz sekcja poniżej |
 | NavBar | default, large title, search | P0 | [ ] | | |
-| BackButton | | P1 | [ ] | | |
+| BackButton | | P1 | [ ] | | Phosphor: `CaretLeft` lub `ArrowLeft` |
+
+### TabBar - Ikony nawigacji (Phosphor Icons)
+
+Biblioteka: `phosphor-react-native` ([npm](https://www.npmjs.com/package/phosphor-react-native))
+
+| Tab | Ikona (primary) | Alternatywy | Import |
+|-----|-----------------|-------------|--------|
+| **Wizyty** | `Stethoscope` | `FirstAid`, `Clipboard`, `MapPin` | `import { Stethoscope } from 'phosphor-react-native'` |
+| **Historia** | `ClockCounterClockwise` | `Clock`, `Archive` | `import { ClockCounterClockwise } from 'phosphor-react-native'` |
+| **Grafik** | `CalendarBlank` | `Calendar`, `CalendarCheck` | `import { CalendarBlank } from 'phosphor-react-native'` |
+| **Grupowe** | `UsersThree` | `Users`, `UsersFour` | `import { UsersThree } from 'phosphor-react-native'` |
+| **Menu** | `List` | `DotsThreeVertical`, `User`, `Gear` | `import { List } from 'phosphor-react-native'` |
+
+**Instalacja:**
+```bash
+npm install phosphor-react-native
+# lub
+yarn add phosphor-react-native
+```
+
+**Przykład użycia:**
+```tsx
+import { Stethoscope, ClockCounterClockwise, CalendarBlank, UsersThree, List } from 'phosphor-react-native';
+
+// W TabBar
+<Stethoscope size={24} color={focused ? '#007AFF' : '#8E8E93'} weight={focused ? 'fill' : 'regular'} />
+```
+
+**Dostępne weights:** `thin`, `light`, `regular`, `bold`, `fill`, `duotone`
 
 ## Feedback
 
