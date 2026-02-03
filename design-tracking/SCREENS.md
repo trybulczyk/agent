@@ -1,4 +1,4 @@
-# Ekrany
+# Ekrany - Nurse App
 
 Tracking ekranów aplikacji do zaprojektowania w Figma Make.
 
@@ -9,44 +9,46 @@ Tracking ekranów aplikacji do zaprojektowania w Figma Make.
 
 ---
 
-## Onboarding
+## Auth `/(auth)`
 
-| Ekran | Stany | Priorytet | Status | Figma Link | Notatki |
-|-------|-------|-----------|--------|------------|---------|
-| Splash Screen | | P0 | [ ] | | |
-| Welcome | | P1 | [ ] | | |
-| Onboarding Step 1 | | P2 | [ ] | | |
-| Onboarding Step 2 | | P2 | [ ] | | |
-| Onboarding Step 3 | | P2 | [ ] | | |
+| Ekran | Ścieżka | Stany | Priorytet | Status | Figma Link | Notatki |
+|-------|---------|-------|-----------|--------|------------|---------|
+| Login | `login.tsx` | default, loading, error | P0 | [ ] | | |
+| Register | `register.tsx` | default, loading, error | P0 | [ ] | | |
+| Forgot Password | | | P2 | [ ] | | |
 
-## Auth
+## Tabs `/(app)/(tabs)`
 
-| Ekran | Stany | Priorytet | Status | Figma Link | Notatki |
-|-------|-------|-----------|--------|------------|---------|
-| Login | default, loading, error | P0 | [ ] | | |
-| Register | default, loading, error | P0 | [ ] | | |
-| Forgot Password | | P1 | [ ] | | |
-| Reset Password | | P1 | [ ] | | |
-| Verification Code | | P1 | [ ] | | |
+| Ekran | Ścieżka | Stany | Priorytet | Status | Figma Link | Notatki |
+|-------|---------|-------|-----------|--------|------------|---------|
+| Tab 1 - Home? | `index.tsx` | empty, loading, loaded | P0 | [ ] | | |
+| Tab 2 | | | P1 | [ ] | | Do zidentyfikowania |
+| Tab 3 | | | P1 | [ ] | | Do zidentyfikowania |
+| Tab 4 | | | P1 | [ ] | | Do zidentyfikowania |
 
-## Main App
+## Visits `/(app)/visits`
 
-| Ekran | Stany | Priorytet | Status | Figma Link | Notatki |
-|-------|-------|-----------|--------|------------|---------|
-| Home | empty, loading, loaded, error | P0 | [ ] | | |
-| Search | empty, results, no results | P1 | [ ] | | |
-| Details | loading, loaded | P1 | [ ] | | |
-| Profile | own, other user | P1 | [ ] | | |
-| Settings | | P2 | [ ] | | |
-| Notifications | empty, with items | P2 | [ ] | | |
+| Ekran | Ścieżka | Stany | Priorytet | Status | Figma Link | Notatki |
+|-------|---------|-------|-----------|--------|------------|---------|
+| Lista wizyt | `index.tsx` | empty, loading, loaded | P0 | [ ] | | |
+| Szczegóły wizyty | `[id].tsx` | loading, loaded | P0 | [ ] | | |
+| Nowa wizyta | | | P1 | [ ] | | |
+| Edycja wizyty | | | P2 | [ ] | | |
 
-## Modals & Overlays
+## Group Actions `/(app)/group_actions`
+
+| Ekran | Ścieżka | Stany | Priorytet | Status | Figma Link | Notatki |
+|-------|---------|-------|-----------|--------|------------|---------|
+| Akcje grupowe | | | P1 | [ ] | | Do zbadania |
+
+## Modals & Bottom Sheets
 
 | Ekran | Stany | Priorytet | Status | Figma Link | Notatki |
 |-------|-------|-----------|--------|------------|---------|
 | Filter Modal | | P2 | [ ] | | |
-| Share Sheet | | P3 | [ ] | | |
 | Confirmation Dialog | | P2 | [ ] | | |
+| Success Toast | | P3 | [ ] | | |
+| Error Toast | | P3 | [ ] | | |
 
 ---
 
@@ -54,20 +56,28 @@ Tracking ekranów aplikacji do zaprojektowania w Figma Make.
 
 <!-- Wpisuj tutaj nowe ekrany które odkryjesz w aplikacji -->
 
-| Ekran | Moduł | Priorytet | Notatki |
-|-------|-------|-----------|---------|
-| | | | |
+| Ekran | Moduł | Ścieżka | Priorytet | Notatki |
+|-------|-------|---------|-----------|---------|
+| | | | | |
 
 ---
 
 ## Mapa ekranów
 
 ```
-[Splash] → [Onboarding] → [Login/Register]
-                              ↓
-                          [Home] ←→ [Search]
-                            ↓
-                        [Details]
-                            ↓
-                    [Action/Modal]
+[Login] → [Register]
+    ↓
+[Tabs Home] ←→ [Tab 2] ←→ [Tab 3] ←→ [Tab 4]
+    ↓
+[Visits List] → [Visit Details]
+    ↓
+[Group Actions]
 ```
+
+## Do uzupełnienia
+
+Po przejściu przez aplikację uzupełnij:
+- [ ] Nazwy wszystkich tabów
+- [ ] Dokładne ścieżki plików
+- [ ] Wszystkie stany każdego ekranu
+- [ ] Screenshoty jako referencje
